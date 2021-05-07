@@ -10,7 +10,7 @@ function on_event(event)
 		local scene = obs.obs_frontend_get_current_scene()
 		local scene_name = obs.obs_source_get_name(scene)
 
-		obs.script_log(obs.LOG_INFO, "Scene switched to: " .. scene_name)
+		-- obs.script_log(obs.LOG_INFO, "Scene switched to: " .. scene_name)
 
 		if trigger_scene_name == scene_name then
 
@@ -26,7 +26,7 @@ function on_event(event)
 					obs.obs_source_update(vlc_source, settings)
 					obs.obs_data_release(settings)
 
-					obs.script_log(obs.LOG_INFO, "VLC Video Source: Refreshed")
+					-- obs.script_log(obs.LOG_INFO, "VLC Video Source: Refreshed")
 
 				end
 
